@@ -1,0 +1,437 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    
+  }
+
+  
+  /* HEADER */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    text-align: center;
+    padding: 12px 0px;
+    width: 100%;
+    background-color: #132758;
+  }
+  
+  header .sosmed {
+    display: flex;
+  }
+  
+  header .sosmed p {
+    margin: 0px 12px 0px 0px;
+    color: white;
+  }
+  
+  header .sosmed i {
+    cursor: pointer;
+    text-align: center;
+    color: rgb(94, 94, 94);
+    padding-top: 6px;
+    margin-right: 9.67px;
+    font-size: 15px;
+    border: none;
+    border-radius: 50px;
+    background: white;
+    height: 25px;
+    width: 25px;
+  }
+  
+  header .text {
+    color: white;
+  }
+  
+  header .text h5 {
+    font-size: calc(12px + 0.5vw);
+  }
+  
+  header .contact {
+    display: flex;
+    color: white;
+  }
+  
+  header .contact p {
+    margin: 0px;
+  }
+  
+  header .contact i {
+    cursor: pointer;
+    padding-right: 8px;
+    padding-top: 6px;
+  }
+  
+  header .gmail {
+    display: flex;
+    color: white;
+  }
+  
+  header .gmail i {
+    cursor: pointer;
+    padding-right: 8px;
+    padding-top: 6px;
+  }
+  
+  header .gmail p {
+    margin: 0px;
+  }
+  
+  /* HEADER */
+  
+  /* NAVBAR */
+  nav h1 {
+    margin-left: 90px;
+    font-weight: 700;
+    color: #132758;
+    margin-right: 170px;
+  }
+  
+  nav ul li {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(94, 94, 94);
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    color: #132758 !important;
+  }
+  
+  form {
+    margin-right: 95px;
+  }
+  
+  .btn1,
+  .btn2,
+  .btn3 {
+    height: 38px;
+    background-color: white;
+    color: gray;
+    border: 2px solid rgb(198, 197, 197);
+    border-radius: 4px;
+    margin-left: 9.5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    transition: 0.3s;
+  }
+  
+  .btn1:hover,
+  .btn2:hover,
+  .btn3:hover {
+    background-color: #132758;
+    color: white;
+  }
+  
+  .btn1 i {
+    padding-right: 8px;
+  }
+  
+  /* NAVBAR */
+
+  
+  
+
+
+  .carousel-inner img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 300px; /* Set maksimum tinggi untuk memenuhi carousel tanpa terlalu tinggi */
+}
+
+.carousel-inner h1 {
+    margin-bottom: 0; /* Atur margin-bottom sesuai kebutuhan */
+}
+
+
+  
+  /* RESPONSIVE */
+  /* HEADER */
+  @media screen and (max-width: 1300px) {
+  
+    header {
+      text-align: center;
+    }
+  
+    /* NAVBAR */
+    nav h1 {
+      font-size: 25px;
+      margin-left: 50px;
+    }
+  
+    nav ul li {
+      font-size: 15px;
+      font-weight: 700;
+    }
+  
+  }
+
+  .services-container {
+    background-color: #132758;
+    padding: 40px;
+    text-align: center;
+}
+
+.services-container h2 {
+    color: white;
+}
+
+.services-content {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Add some space between the items */
+    margin-top: 20px; /* Add some space between the heading and the items */
+}
+
+.service-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    width: 300px;
+    height: 250px; /* Increased height to accommodate larger image and center button */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-item img {
+    width: 120px; /* Increased width of the image */
+    height: auto; /* Automatically adjust height to maintain aspect ratio */
+    align-self: center; /* Center the image horizontally */
+    margin-bottom: 20px; /* Added space below the image */
+}
+
+.service-item h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.service-item p {
+    font-size: 14px;
+}
+
+.service-item .btn {
+    align-self: center; /* Center the button horizontally */
+    padding: 10px 20px;
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.service-item .btn:hover {
+    background-color: #0d47a1;
+}
+
+
+
+
+
+
+.news-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.news-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #132758; /* Warna biru latar belakang */
+  width: 200px; /* Lebar container */
+  height: 200px; /* Tinggi container */
+  border-radius: 10px; /* Radius sudut */
+  padding: 10px;
+  text-align: center;
+  overflow: hidden; /* Untuk memastikan gambar tidak meluap */
+}
+
+.news-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Memastikan gambar mengisi container */
+  z-index: -1; /* Menempatkan gambar di belakang teks */
+}
+
+.news-item h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #ffffff;
+  z-index: 1; /* Memastikan teks berada di atas gambar */
+}
+
+.news-item p {
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0;
+  z-index: 1; /* Memastikan teks berada di atas gambar */
+}
+
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #262626;
+  background-color: #f5f5f5;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -6px;
+  content: "";
+  border-top: 6px solid #333;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+
+/* Form Pendaftaran */
+.container {
+  margin-top: 50px;
+  width: 80%;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 100px; /* Add margin bottom to create space below h1 */
+}
+
+h2 {
+  margin-top: 100px; /* Atur jarak sesuai kebutuhan */
+}
+
+.instructions {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.instructions img {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.instruction-text {
+  flex: 1;
+}
+
+.instruction-text h2 {
+  color: #333;
+}
+
+.instruction-text ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #132758;
+  color: white;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 20px;
+}
+
+.form-header h2 {
+  margin: 0;
+  text-align: center;
+}
+
+/* .language-switcher {
+  display: flex;
+  align-items: center;
+} */
+
+.language-switcher label {
+  margin-right: 10px;
+}
+
+.language-switcher select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.registration-form {
+  padding: 20px;
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  width: calc(100% - 10px);
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#same-as-identity {
+  margin-left: 5px;
+}

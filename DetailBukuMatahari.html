@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8fafc" />
+    <title>Grhatama Pustaka</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <link
+      rel="stylesheet"
+      href="Global Assets/fontawesome-free-6.5.1-web/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        display: flex;
+        width: 85%;
+        margin: 20px auto;
+      }
+
+      .main-content {
+        flex: 3;
+        background: white;
+        padding: 20px;
+        margin-right: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      .book-detail {
+        display: flex;
+      }
+
+      .book-detail img {
+        width: 200px;
+        height: auto;
+        margin-right: 20px;
+        border-radius: 10px;
+      }
+
+      .book-info {
+        flex: 1;
+      }
+
+      .book-info h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      .book-info .date,
+      .book-info .title {
+        margin: 5px 0;
+        color: gray;
+      }
+
+      .book-description {
+        margin-top: 20px;
+      }
+
+      .book-description h2 {
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+
+      .book-description table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .book-description table td {
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+
+      .book-description table td:first-child {
+        width: 150px;
+        font-weight: bold;
+      }
+
+      .book-description table a {
+        color: #0073e6;
+        text-decoration: none;
+      }
+
+      .search {
+        margin-bottom: 20px;
+      }
+
+      .search input {
+        width: calc(80% - 20%);
+        padding: 10px;
+        margin-right: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .search button {
+        padding: 10px;
+        background: #132758;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .search button:hover {
+        background-color: #0056b3;
+      }
+
+      .other-books {
+        background: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      .other-books h2 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      .other-books ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .other-books ul li {
+        margin-bottom: 10px;
+      }
+      .other-books li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ddd; /* Menambahkan border pada tiap item */
+        border-radius: 5px; /* Membuat border menjadi melengkung */
+      }
+      .other-books li img {
+        width: 100px;
+        height: 100px;
+        margin-right: 15px;
+        border-radius: 5px;
+      }
+      .other-books li p {
+        margin: 0;
+        font-size: 18px; /* Ukuran font untuk judul */
+      }
+
+      .other-books .date {
+        font-size: 12px;
+        color: gray;
+      }
+
+      .back {
+        text-align: left;
+        margin-left: 50px;
+        padding: 10px; /* Add some padding for better spacing */
+      }
+      .back a {
+        text-decoration: none;
+        color: rgb(250, 249, 249); /* Adjust text color as needed */
+        font-size: 16px; /* Adjust font size as needed */
+        display: inline-flex;
+        align-items: center; /* Align text vertically */
+        padding: 10px 20px; /* Add padding inside the button */
+        background-color: #132758; /* Add background color */
+        border-radius: 5px; /* Add rounded corners */
+      }
+      .back a:hover {
+        background-color: #0056b3; /* Change background on hover */
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="px-5">
+      <div class="sosmed d-none d-lg-inline-flex">
+        <p>Follow us:</p>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+      <div class="text"></div>
+      <!-- <div class="contact d-none d-lg-inline-flex">
+        <i class="fa-solid fa-phone"></i>
+        <p>+62 813-5267-3477</p>
+      </div> -->
+      <div class="gmail d-none d-md-inline-flex">
+        <i class="fa-regular fa-envelope"></i>
+        <p>grhatama@gmail.com</p>
+      </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-lg-5">
+      <div class="container-fluid">
+        <h1 class="mx-2 mx-lg-5">Grhatama Pustaka</h1>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Beranda.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <button
+                class="btn btn-link nav-link"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Service
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="">E-Reservation</a></li>
+                <li>
+                  <a class="dropdown-item" href="kategori_buku.html"
+                    >E-Resource</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Form_Pendaftaran.html"
+                    >Member Registration</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="">Activity</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Facility</a>
+            </li>
+          </ul>
+          <button
+            class="btn1"
+            data-bs-toggle="modal"
+            data-bs-target="#modalSignin"
+          >
+            <i class="fa-regular fa-user"></i>Sign In / Sign Up
+          </button>
+          <!-- <a href="Cart/index.html"
+              ><button class="btn2">
+                <i class="fa-solid fa-cart-shopping"></i></button
+            ></a> -->
+          <a href=""
+            ><button class="btn3" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i></button
+          ></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal dialog login -->
+    <div
+      class="modal fade"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      id="modalSignin"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content rounded-4 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <h1 class="fw-bold mb-0 fs-2">Login</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body p-5 pt-0">
+            <form class="me-0">
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control rounded-3"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control rounded-3"
+                  id="floatingPassword"
+                  placeholder="Password"
+                />
+                <label for="floatingPassword">Password</label>
+              </div>
+              <button
+                class="w-100 mb-2 btn btn-lg rounded-3 btn-primary"
+                type="submit"
+              >
+                Login
+              </button>
+              <small class="text-body-secondary"
+                >By clicking Login, you agree to the terms of use.</small
+              >
+              <hr class="my-4" />
+              <h2 class="fs-5 fw-bold mb-3">atau login dengan</h2>
+              <button
+                class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3"
+                type="submit"
+              >
+                <i class="fa-brands fa-twitter" style="color: #74c0fc"></i>
+                Sign up with Twitter
+              </button>
+              <button
+                class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3"
+                type="submit"
+              >
+                <i class="fa-brands fa-facebook" style="color: #1a9cff"></i>
+                Sign up with Facebook
+              </button>
+              <br />
+              <br />
+              <small class="text-body-secondary"
+                >Belum punya akun? <a href="">Daftar sekarang</a></small
+              >
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detail Buku -->
+    <div class="back">
+      <a href="kategori_buku(all).html"> Back</a>
+    </div>
+    <div class="container">
+      <div class="main-content">
+        <div class="book-detail">
+          <img src="../assets/matahari.jpg" alt="Ensiklopedia Nusantara" />
+          <div class="book-info">
+            <h1><b>Matahari</b></h1>
+            <p class="title">Pengarang : Tere Liye</p>
+          </div>
+        </div>
+        <div class="book-description">
+          <h2>Deskripsi Buku</h2>
+          <table>
+            <tr>
+              <td><strong>Judul</strong></td>
+              <td>Matahari</td>
+            </tr>
+            <tr>
+              <td><strong>Penulis</strong></td>
+              <td>Tere Liye</td>
+            </tr>
+            <tr>
+              <td><strong>Penerbit</strong></td>
+              <td>Jakarta : Gramedia Pustaka Utama, 2019</td>
+            </tr>
+            <tr>
+              <td><strong>Tahun Terbit</strong></td>
+              <td>2019</td>
+            </tr>
+            <tr>
+              <td><strong>ISBN</strong></td>
+              <td>123456789</td>
+            </tr>
+            <tr>
+              <td><strong>Uraian</strong></td>
+              <td>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos,
+                cum dignissimos dolorem vel, suscipit sequi sint totam iusto
+                provident exercitationem, harum a quo veritatis odio libero nemo
+                voluptas sed qui consequatur excepturi at? Beatae, odit debitis!
+                Nemo nostrum neque perspiciatis dolore alias et quam odio
+                dolorum ratione ipsum magni magnam cumque, necessitatibus
+                aspernatur similique quae dolorem nam, obcaecati harum. Maiores
+                expedita aliquid fuga consequatur ipsam alias neque impedit hic
+                ipsum.
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="other-books">
+        <div class="search">
+          <input type="text" placeholder="Search..." />
+          <button>Search</button>
+        </div>
+        <h2>Buku Lainnya</h2>
+        <ul>
+          <li>
+            <a href="DetailBukuBumi.html">
+              <img src="../assets/bumi.jpg" alt="Bintang Book Cover" />
+            </a>
+            <p>Bumi</p>
+          </li>
+          <li>
+            <a href="DetailBukuMatahari.html">
+              <img src="../assets/matahari.jpg" alt="Bintang Book Cover" />
+            </a>
+            <p>Matahari</p>
+          </li>
+          <li>
+            <a href="DetailBukuBulan.html">
+              <img src="../assets/bulan.jpg" alt="Bintang Book Cover" />
+            </a>
+            <p>Bulan</p>
+          </li>
+          <li>
+            <a href="DetailBukuWorldHistory.html">
+              <img src="../assets/World History.jpg" alt="Bintang Book Cover" />
+            </a>
+            <p>World History</p>
+          </li>
+          <li>
+            <a href="DetailKamus.html">
+              <img
+                src="../assets/kamus inggris-indonesia.jpg"
+                alt="Bintang Book Cover"
+              />
+            </a>
+            <p>Kamus Inggris-Indonesia</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <div style="background-color: #132758; color: white">
+      <div class="container-lg">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-5 mt-5">
+          <div class="col mb-3">
+            <a
+              href=""
+              class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
+            >
+              <h1 style="color: #ffffff">Grhatama Pustaka</h1>
+            </a>
+            <p class="text-white">123 Main Street, City, Country</p>
+          </div>
+
+          <div class="col mb-3">
+            <h5>Navigasi</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="Homepage/index.html" class="nav-link p-0 text-white"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#benefits" class="nav-link p-0 text-white">Benefits</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#bestseller" class="nav-link p-0 text-white"
+                  >Best Seller</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="Products/index.html" class="nav-link p-0 text-white"
+                  >Produk Kami</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#faq" class="nav-link p-0 text-white">FAQs</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col mb-3">
+            <h5>Informasi</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="Contac_Us/index.html" class="nav-link p-0 text-white"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="about/index.html" class="nav-link p-0 text-white"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col mb-3">
+            <h5>Sosial Media</h5>
+            <ul class="nav flex-row">
+              <li class="nav-item mb-2">
+                <a href="#" class="me-2"
+                  ><img src="../assets/ic_facebook.svg" alt="facebook"
+                /></a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="https://www.instagram.com/r.rzkika" class="me-2"
+                  ><img src="../assets/ic_instagarm.svg" alt="facebook"
+                /></a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="me-2"
+                  ><img src="../assets/ic_twitter.svg" alt="facebook"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script>
+      window.addEventListener("load", () => {
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("sw.js");
+        }
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
