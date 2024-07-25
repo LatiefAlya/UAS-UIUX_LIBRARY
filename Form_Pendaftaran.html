@@ -196,129 +196,82 @@
       <div class="instructions">
         <img src="../assets/daftar.png" alt="Illustration" />
         <div class="instruction-text">
-          <h3>Petunjuk Pengisian Form</h3>
+          <h3>Form Filling Instructions</h3>
           <ul>
             <li>
-              Pastikan data yang anda masukkan sesuai kartu identitas yang
-              berlaku, benar, dan dapat dipertanggungjawabkan.
+              Make sure the data you enter matches the valid identity card, is
+              correct, and can be accounted for.
             </li>
             <li>
-              Isilah dengan menggunakan huruf kapital di setiap awal kata.
+              Fill in by using capital letters at the beginning of each word.
             </li>
             <li>
-              Data akan diverifikasi oleh petugas Pengelolaan Keanggotaan BGI,
-              jika diperlukan akan dihubungi oleh petugas tersebut.
+              The data will be verified by the Membership Management officer, if
+              necessary will be contacted by the officer.
             </li>
             <li>
-              Bila ada data yang tidak sesuai dengan identitas anggota, nama
-              belum memiliki KTA atau nomor identitas invalid, maka akan
-              berdampak pada penonaktifan layanan keanggotaan online.
+              If there is data that does not match the member's identity, the
+              name does not yet have a KTA or invalid identity number, it will
+              have an impact on the deactivation of online membership services.
             </li>
           </ul>
         </div>
       </div>
       <form class="registration-form">
         <div class="form-header">
-          <h2>Formulir Pendaftaran Anggota</h2>
+          <h2 class="text-center">Registration Form</h2>
         </div>
         <div class="form-group">
-          <label for="identity-number">No. Identitas *</label>
+          <label for="identity-number">No. Identity *</label>
           <input
             type="text"
             id="identity-number"
-            placeholder="Masukkan nomor identitas"
+            placeholder="Enter identity number"
           />
         </div>
         <div class="form-group">
-          <label for="password">Password *</label>
-          <input type="password" id="password" placeholder="Password" />
-        </div>
-        <div class="form-group">
-          <label for="full-name">Nama Lengkap *</label>
+          <label for="full-name">Full Name *</label>
           <input
             type="text"
             id="full-name"
-            placeholder="Masukkan nama lengkap anda"
+            placeholder="Enter your full name"
           />
         </div>
         <div class="form-group">
-          <label for="birth-place">Tempat/Tanggal Lahir *</label>
-          <input type="text" id="birth-place" placeholder="Tempat Lahir" />
-          <select id="birth-day">
-            <!-- Add day options -->
-          </select>
-          <select id="birth-month">
-            <!-- Add month options -->
-          </select>
-          <select id="birth-year">
-            <!-- Add year options -->
-          </select>
+          <label for="full-name">Gender *</label>
+          <input type="text" id="full-name" placeholder="Enter your gender" />
+        </div>
+        <div class="form-group">
+          <label for="birth-place">Date/Birth Place *</label>
+          <input type="text" id="birth-place" placeholder="date/birth palce" />
         </div>
         <div class="form-group">
           <label for="identity-address"
-            >Alamat Tinggal Sesuai Identitas *</label
+            >Residential Address as per Identity *</label
           >
           <input
             type="text"
             id="identity-address"
-            placeholder="Masukkan alamat Anda sesuai identitas"
+            placeholder="Enter your address as identified"
           />
-          <select id="identity-province">
-            <!-- Add province options -->
-          </select>
-          <select id="identity-city">
-            <!-- Add city options -->
-          </select>
         </div>
         <div class="form-group">
-          <label for="current-address">Alamat Tinggal Saat Ini *</label>
-          <input type="checkbox" id="same-as-identity" />
-          <label for="same-as-identity"
-            >(Jika sama dengan alamat identitas)</label
-          >
+          <label for="current-address">Current Residential Address *</label>
+
           <input
             type="text"
             id="current-address"
-            placeholder="Masukkan alamat tinggal saat ini"
-          />
-          <select id="current-province">
-            <!-- Add province options -->
-          </select>
-          <select id="current-city">
-            <!-- Add city options -->
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="phone-number">Nomor HP *</label>
-          <input type="text" id="phone-number" placeholder="Nomor HP" />
-        </div>
-        <div class="form-group">
-          <label for="home-phone">Nomor Telepon Rumah</label>
-          <input
-            type="text"
-            id="home-phone"
-            placeholder="Nomor Telepon Rumah"
+            placeholder="Enter current address of residence"
           />
         </div>
-        <div class="form-group">
-          <label for="institution">Nama Institusi</label>
-          <input type="text" id="institution" placeholder="Nama Institusi" />
-        </div>
-        <div class="form-group">
-          <label for="institution-address">Alamat Institusi</label>
-          <input
-            type="text"
-            id="institution-address"
-            placeholder="Alamat Institusi"
-          />
-        </div>
-        <div class="form-group">
-          <label for="occupation">Pekerjaan *</label>
-          <input type="text" id="occupation" placeholder="Pekerjaan" />
-        </div>
+
         <div class="form-group">
           <label for="email">Email *</label>
           <input type="email" id="email" placeholder="Email" />
+        </div>
+        <div class="form-group">
+          <label for="phone-number">Phone Number *</label>
+          <input type="text" id="phone-number" placeholder="Phone Number" />
         </div>
         <div class="btn-container">
           <a

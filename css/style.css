@@ -82,13 +82,16 @@ body {
   
   /* NAVBAR */
   nav h1 {
+   
     margin-left: 90px;
     font-weight: 700;
     color: #132758;
     margin-right: 170px;
   }
   
+  
   nav ul li {
+   
     font-size: 18px;
     font-weight: 700;
     color: rgb(94, 94, 94);
@@ -138,11 +141,12 @@ body {
     max-width: 100%;
     height: auto;
     object-fit: cover;
-    max-height: 300px; /* Set maksimum tinggi untuk memenuhi carousel tanpa terlalu tinggi */
+    max-height: 900px; /* Set maksimum tinggi untuk memenuhi carousel tanpa terlalu tinggi */
 }
 
 .carousel-inner h1 {
     margin-bottom: 0; /* Atur margin-bottom sesuai kebutuhan */
+    height: 700px;
 }
 
 
@@ -216,7 +220,7 @@ body {
 .service-item .btn {
     align-self: center; /* Center the button horizontally */
     padding: 10px 20px;
-    background-color: #1e88e5;
+    background-color: #4299e1;
     color: white;
     border: none;
     border-radius: 5px;
@@ -225,7 +229,7 @@ body {
 }
 
 .service-item .btn:hover {
-    background-color: #0d47a1;
+    background-color: #132758;
 }
 
 
